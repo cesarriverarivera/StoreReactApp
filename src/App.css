@@ -1,0 +1,11 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.cardsProd{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
