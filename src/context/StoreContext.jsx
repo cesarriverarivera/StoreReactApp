@@ -6,6 +6,8 @@ function StoreProvider ( {children} ) {
     const [list, setList] = useState([])
     const [loading, setLoading] = useState(true)
     const [selectedItem, setSelectedItem] = useState( {} )
+    const [listFiltered, setListFiltered] = useState([])
+    const [searchValue, setSearchValue] = useState("")
 
     useEffect(() =>{
         fetch("https://ecommerce-json-jwt.onrender.com/items")
@@ -13,6 +15,7 @@ function StoreProvider ( {children} ) {
             .then(data => {
                 console.log(data)
                 setList(data)
+                setListFiltered(data)
                 setLoading(false)
             })
     }, [])
@@ -21,12 +24,16 @@ function StoreProvider ( {children} ) {
         list,
         loading,
         selectedItem,
-        setSelectedItem
+        setSelectedItem,
+        listFiltered,
+        setListFiltered,
+        searchValue, 
+        setSearchValue
     }
 
     return (
         // pongo data dentro  de [] para que funcione el contexto
-        <StoreContext.Provider value={[data]}> 
+        <StoreContext.Provider value={data}> 
             {children}
         </StoreContext.Provider>
     )

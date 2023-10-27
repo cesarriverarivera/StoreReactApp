@@ -1,32 +1,19 @@
 import React from 'react'
 import Cards from '../Cards/Cards'
-import { useStoreContext } from '../../hooks/useStoreContext'
+import { useStoreContext } from '@/hooks/useStoreContext'
 import './products.css'
 
 const Products = () => {
-    const [list, loading, setSelectedItem] = useStoreContext()
-    
+    const { loading } = useStoreContext()
+
     if(loading) {
-        <h1>Cargando...</h1>
+        return <h1>Please wait, free server service on waking up! ...</h1>
     }
     else {
         return (
-            
                 <div className='cardsProd'>
-                {
-                    console.log(list)
-                    
-                }    
-                
-                {
-                    list.list.map((item, index) => {
-                        return (
-                            <Cards item={item} key={index} /> 
-                        )
-                    })
-                }
+                <Cards/>
                 </div>
-            
           )
     }
   

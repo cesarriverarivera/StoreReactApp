@@ -1,4 +1,16 @@
-.imageCard{
-    width: 100%;
-    height: 50%;
+.cardBody{
+    display: flex;
+    flex-direction: column;
+}
+.cardDetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.cardTitle{
+    height: 5svh;
+}
+
+.cardText{
+    min-height: 20svh;
 }

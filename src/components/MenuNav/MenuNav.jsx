@@ -2,9 +2,12 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { useStoreContext } from '@/hooks/useStoreContext'
 import './MenuNav.css'
 
 const MenuNav = () => {
+    const {list, listFiltered, setListFiltered, searchValue, setSearchValue } = useStoreContext()
+
     return (
         <>
             <Navbar expand="lg" className="bg-body-tertiary">
@@ -17,7 +20,7 @@ const MenuNav = () => {
                             <Nav.Link href="#link">Category</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
-                    <input type='text' placeholder='Buscar'></input>
+                    <input id='inputSearch' type='text' placeholder='Buscar'></input>
                 </Container>
             </Navbar>
         </>
