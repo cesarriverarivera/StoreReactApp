@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import VistaDetalle from './components/VistaDetalle/VistaDetalle.jsx';
 
 
+
 const routes = createBrowserRouter([
   {
     path: "/",
