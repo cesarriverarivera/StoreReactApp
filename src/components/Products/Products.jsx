@@ -2,12 +2,13 @@ import React from 'react'
 import Cards from '../Cards/Cards'
 import { useStoreContext } from '@/hooks/useStoreContext'
 import './products.css'
+import { Loading } from '../Loading/Loading'
 
 const Products = () => {
     const { loading } = useStoreContext()
 
     if(loading) {
-        return <h1>Please wait, free server service on waking up! ...</h1>
+        return <Loading/>
     }
     else {
         return (
