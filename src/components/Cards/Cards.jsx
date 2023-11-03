@@ -7,7 +7,7 @@ import './Cards.css'
 
 
 const Cards = () => {
-    const { list, listFiltered } = useStoreContext()
+    const { list, productImage } = useStoreContext()
     const placeHolderImage = "https://sellmyuniform.co.uk/wp-content/uploads/2023/03/looking_for.jpg"
 
     return (
@@ -18,7 +18,7 @@ const Cards = () => {
                         <div key={item.id}>
 
                             <Card style={{ width: '18rem', height: '36rem' }}>
-                                    <Card.Img variant="top" src={item.image || item.images || placeHolderImage} style={ {height: '15rem'} } />
+                                    <Card.Img variant="top" src={item.image || item.images || productImage} style={ {height: '15rem'} } />
                                 
                                     <Card.Body className='cardBody'>
                                         <Card.Title className='cardTitle'> {item.product_name} </Card.Title>

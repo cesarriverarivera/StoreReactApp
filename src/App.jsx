@@ -1,14 +1,22 @@
-import Home from './pages/Home/Home'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css'
+import MenuNav from './components/MenuNav/MenuNav';
+import { RoutesIndex } from './routes/RoutesIndex';
+import { StoreProvider } from './context/storeContext';
 
 
 function App() {
 
   return (
-    <>
-    <Home/>
-    </>
+
+    <StoreProvider>
+      <BrowserRouter>
+        <MenuNav />
+        <RoutesIndex />
+      </BrowserRouter>
+    </StoreProvider>
+
   )
 }
 

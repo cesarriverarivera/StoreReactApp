@@ -1,10 +1,12 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
+import { useStoreContext } from '@/hooks/useStoreContext'
 import './VistaDetalle.css'
 
 
 const VistaDetalle = () => {
+   const {productImage} = useStoreContext()
    const location =useLocation()
    let item = location.state
    console.log(item)
@@ -22,7 +24,7 @@ const VistaDetalle = () => {
                 <Button variant="success">Buy</Button>{' '}
             </div>
             <div className='col-6 detalle'>
-                <img className='imagenDetalle' src= {item.image} alt="" />
+                <img className='imagenDetalle' src= {item.image || item.images || productImage } alt="" />
             </div>
         </div>
         
