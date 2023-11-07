@@ -1,9 +1,18 @@
 import React from 'react'
 import logo from '@/assets/react.svg'
 import { useForm } from "react-hook-form"
+import { loginUserService } from '@/services/userServices'
+import { useNavigate } from 'react-router-dom'
+import { useAuthContext } from '@/hooks/useAuthContext'
 import '@/styles/form.css'
 
 export const Login = () => {
+
+  //se usa usenavigate para redireccionar a alguna ruta (pertenece a react router dom)
+  const navigate = useNavigate()
+
+  //use login del contexto useAuthContext
+  const {login} = useAuthContext()
 
   const {
     register,
@@ -11,7 +20,19 @@ export const Login = () => {
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = async (data) => {
+    try {
+      const response = await  loginUserService(data)
+      if (response.status === 200) {
+        // console.log("usuario ha iniciado sesison exitosamente", response.data.token)
+        login(response.data.token)
+        navigate('/')
+      }
+    }
+    catch (error) {
+      console.log(`ocurrio un error en login `, error.message)
+    }
+  }
 
   return (
     <>
