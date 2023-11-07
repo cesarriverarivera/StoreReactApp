@@ -2,7 +2,7 @@ import React from 'react'
 import ReactLoading from 'react-loading';
 import './loading.css'
 
-export const Loading = ({ type, color }) => {
+export const Loading = () => {
     
   return (
     <>
