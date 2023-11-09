@@ -1,0 +1,24 @@
+.cartContent{
+    &__header{
+        padding-top: 20px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+}
+
+.cart {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    &__image {
+        width: 80px;
+    }
+    &__contador{
+        display: flex;
+        justify-content: center;
+    }
+}

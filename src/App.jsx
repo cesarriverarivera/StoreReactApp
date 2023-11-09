@@ -4,20 +4,23 @@ import MenuNav from './components/MenuNav/MenuNav';
 import { RoutesIndex } from './routes/RoutesIndex';
 import { StoreProvider } from './context/storeContext';
 import { AuthProvider } from './context/AuthContext';
+import { CartProvider } from './context/CartContext';
 import './App.css'
 
 
 function App() {
 
   return (
-    <AuthProvider>
-      <StoreProvider>
-        <BrowserRouter>
-          <MenuNav />
-          <RoutesIndex />
-        </BrowserRouter>
-      </StoreProvider>
-    </AuthProvider>
+    <CartProvider>
+      <AuthProvider>
+        <StoreProvider>
+          <BrowserRouter>
+            <MenuNav />
+            <RoutesIndex />
+          </BrowserRouter>
+        </StoreProvider>
+      </AuthProvider>
+    </CartProvider>
 
   )
 }

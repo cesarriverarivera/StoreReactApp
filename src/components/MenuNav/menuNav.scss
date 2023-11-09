@@ -3,6 +3,8 @@ $header-background: #cdcdcd;
 
 
 @mixin headerLink($hover: true) {
+    display: flex;
+    align-items: center;
     color: $menu-color;
     text-decoration: none;
     letter-spacing: 1px;
@@ -23,6 +25,10 @@ $header-background: #cdcdcd;
     top: 0;
     z-index: 1;
 
+    &__top{
+        display: flex;
+        justify-content: end;
+    }
 
     &__links{
         padding: 5px;
@@ -38,6 +44,11 @@ $header-background: #cdcdcd;
             border-bottom: solid 2px $menu-color;
             font-weight: bold;
         }
+    }
+ 
+    &__user{
+        font-size: 0.8rem;
+        font-weight: bold;
     }
 
 }
