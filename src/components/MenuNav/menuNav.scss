@@ -1,5 +1,5 @@
 $menu-color: #3d3d3d;
-$header-background: #cdcdcd;
+$header-background: rgba(55, 55, 221, 0.777);
 
 
 @mixin headerLink($hover: true) {
@@ -24,6 +24,7 @@ $header-background: #cdcdcd;
     position: sticky;
     top: 0;
     z-index: 1;
+    height: 10svh;
 
     &__top{
         display: flex;
@@ -49,6 +50,17 @@ $header-background: #cdcdcd;
     &__user{
         font-size: 0.8rem;
         font-weight: bold;
+    }
+    &__input {
+        border-radius: 15px;
+        border: solid 1px black;
+        height: 30px;
+        &::placeholder{
+            padding-left: 8px;
+            font-style: italic;
+        }
+        
+        
     }
 
 }

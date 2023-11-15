@@ -1,16 +1,24 @@
+.card {
+    height: 550px;
+    width: 320px;
+    box-shadow: 2px 2px 8px 6px rgba(0, 0, 0, 0.364);
+    -webkit-box-shadow: 2px 2px 8px 6px rgba(0, 0, 0, 0.364);
+    -moz-box-shadow: 2px 2px 8px 6px rgba(0, 0, 0, 0.364);
+}
+.cardImage{
+    height: 50%;
+}
 .cardBody{
-    display: flex;
-    flex-direction: column;
-}
-.cardDetail{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-.cardTitle{
-    height: 5svh;
+    text-align: center;
 }
 
-.cardText{
-    min-height: 20svh;
+.cardElement{
+    text-align: center;
+}
+/* cualquier boton de bootstrap le afectaran estos estilos */
+.btn {
+    width: 100%;
+    border-top-right-radius: 0!important;
+    border-top-left-radius: 0!important;
+    background-color: rgba(55, 55, 221, 0.777)!important;
 }

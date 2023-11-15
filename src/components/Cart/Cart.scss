@@ -1,15 +1,32 @@
-.cartContent{
-    &__header{
+.cartContent {
+    &__header {
         padding-top: 20px;
         display: flex;
+        justify-content: center;
         text-align: center;
         align-items: center;
         font-size: 2rem;
     }
+    &__element{
+        display: flex;
+        justify-content: center;
+    }
+    &__btnDeleteAll{
+        display: flex;
+        justify-self: center;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        background-color: rgba(55, 55, 221, 0.777);
+        border: none;
+        &:hover{
+            scale: 1.1;
+            color: white;
+        }
+    }
 }
 
 .cart {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -17,8 +34,34 @@
     &__image {
         width: 80px;
     }
-    &__contador{
+
+    &__contador {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__btnChange {
+        display: flex;
+        position: relative;
+        top: -10px;
+        border: none;
+        border-radius: 30%;
+        background-color: rgb(65, 65, 65);
+        color: white;
+    }
+
+    &__p {
+        font-size: 1.5rem;
+    }
+
+    &__btnTrash {
+        display: flex;
+        position: relative;
+        top: -10px;
+        border: none;
+        border-radius: 30%;
+        background-color: transparent;
+        color: red;
     }
 }

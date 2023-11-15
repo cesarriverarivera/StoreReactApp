@@ -1,15 +1,13 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter } from 'react-router-dom';
-import MenuNav from './components/MenuNav/MenuNav';
-import { RoutesIndex } from './routes/RoutesIndex';
-import { StoreProvider } from './context/storeContext';
-import { AuthProvider } from './context/AuthContext';
-import { CartProvider } from './context/CartContext';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter } from 'react-router-dom'
+import MenuNav from './components/MenuNav/MenuNav'
+import { RoutesIndex } from './routes/RoutesIndex'
+import { StoreProvider } from './context/storeContext'
+import { AuthProvider } from './context/AuthContext'
+import { CartProvider } from './context/CartContext'
 import './App.css'
 
-
-function App() {
-
+function App () {
   return (
     <CartProvider>
       <AuthProvider>

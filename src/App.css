@@ -7,6 +7,5 @@ body{
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  row-gap: 10px;
-
+  row-gap: 20px;
 }

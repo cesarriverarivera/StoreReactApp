@@ -1,0 +1,21 @@
+.prod {
+    opacity: 0;
+ 
+}
+.prodVisible {
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(55, 55, 221, 0.962);
+    color: white;
+    border-radius: 10px;
+    width: 12%;
+}
+.prodVisible p {
+    margin-bottom: 0;
+}
+.prod p{
+    margin-bottom: 0;
+}
