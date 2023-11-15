@@ -4,14 +4,15 @@
 }
 .prodVisible {
     opacity: 1;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(55, 55, 221, 0.962);
+    background-color: rgba(55, 55, 221, 0.763);
     color: white;
     border-radius: 10px;
-    width: 12%;
+    height: 80%;
 }
 .prodVisible p {
     margin-bottom: 0;

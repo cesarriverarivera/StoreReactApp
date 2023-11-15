@@ -41,22 +41,20 @@ const Cards = () => {
           return (
             <div key={item.id}>
 
-              <Card style={{ width: '18rem', height: '36rem' }}>
-                <Card.Img variant='top' src={item.image || item.images || productImage} style={{ height: '15rem' }} />
+              <Card className='card'>
+                <Card.Img className='cardImage' variant='top' src={item.image || item.images || productImage} />
 
-                <Card.Body className='cardBody'>
-                  <Card.Title className='cardTitle'> {item.product_name} </Card.Title>
-                  <Card.Text className='cardText'>
+                <Card.Body>
+                  <Card.Title className='cardBody'> {item.product_name} </Card.Title>
+                  <Card.Text className='cardBody'>
                     {item.description}
                   </Card.Text>
-                  <div className='cardDetail'>
-                    <Card.Text> Price: ${item.price} </Card.Text>
-                    <Link to={`/detalle/${item.product_name} `} state={item}>
-                      <Button variant='primary'>More info</Button>
-                    </Link>
-                  </div>
 
                 </Card.Body>
+                <Card.Text className='cardElement'> Price: ${item.price} </Card.Text>
+                <Link to={`/detalle/${item.product_name} `} state={item}>
+                  <Button className='btn' variant='primary'>More info</Button>
+                </Link>
 
               </Card>
             </div>

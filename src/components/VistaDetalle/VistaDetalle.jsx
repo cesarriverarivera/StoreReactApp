@@ -22,8 +22,13 @@ const VistaDetalle = () => {
         <ProdAdded />
       </div>
       <div className='container vistaDetalle'>
+
         <div className='row detalleFila'>
-          <div className='col-6 detalle'>
+          <div className='col-sm-12 col-md-6 detalle'>
+            <img className='imagenDetalle' src={item.image || item.images || productImage} alt='' />
+          </div>
+
+          <div className='col-sm-12 col-md-6 detalle'>
             <h2> {item.product_name} </h2>
             <p> Brand: {item.brand}</p>
             <p> Category: {item.category}</p>
@@ -41,9 +46,6 @@ const VistaDetalle = () => {
             </Button>
           </div>
 
-          <div className='col-6 detalle'>
-            <img className='imagenDetalle' src={item.image || item.images || productImage} alt='' />
-          </div>
         </div>
 
       </div>

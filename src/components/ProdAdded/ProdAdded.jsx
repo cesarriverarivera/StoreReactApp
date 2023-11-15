@@ -7,7 +7,7 @@ const ProdAdded = () => {
   return (
     <>
       <div id='prodAddToCart' className={isBuyPress ? 'prodVisible' : 'prod'}>
-        <p>Producto Agregado!</p>
+        <p>Added to Cart!</p>
       </div>
     </>
   )

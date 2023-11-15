@@ -1,24 +1,38 @@
-.vistaDetalle{
+.vistaDetalle {
     height: 80svh;
-    overflow: hidden;
 }
-.detalleFila{
+
+.detalleFila {
     height: 80svh;
     display: flex;
     justify-content: center;
 }
-.imagenDetalle{
+
+.imagenDetalle {
     width: 90%;
     height: 75svh;
     border-radius: 10%;
 }
-.detalle{
+
+.detalle {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+/* para centrar elemento en medio de la pantalla */
 .component {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 10%;
+}
+
+@media screen and (max-width: 768px) {
+    .imagenDetalle {
+        height: 30svh;
+        max-width: 65%;
+    }
 }

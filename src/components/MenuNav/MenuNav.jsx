@@ -40,10 +40,10 @@ const MenuNav = () => {
   return (
     <>
       <Navbar expand='lg' className='header'>
-        <Container>
-          <Navbar.Brand>Store-React</Navbar.Brand>
+        <Container className='header__container'>
+          <Navbar.Brand className='header__brand'>Store-React</Navbar.Brand>
           <input onChange={(e) => handlerSearch(e.target.value)} id='inputSearch' className='header__input' type='text' placeholder='Buscar Producto' />
-          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+          <Navbar.Toggle className='header__toggle' aria-controls='basic-navbar-nav' />
           <Navbar.Collapse className='header__top' id='basic-navbar-nav'>
             <Nav className=' header__links'>
               <NavLink className={({ isActive }) => linkIsActive(isActive)} to='/'>Home</NavLink>
