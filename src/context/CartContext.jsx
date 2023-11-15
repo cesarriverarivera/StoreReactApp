@@ -61,8 +61,9 @@ function CartProvider ({ children }) {
     const valores = []
     let sumaTotal = 0
     prodBuy.map((e) => {
-      valores.push(e.total_price)
-      console.log(valores)
+      return (
+        valores.push(e.total_price)
+      )
     })
     valores.forEach((e) => {
       sumaTotal = sumaTotal + e
