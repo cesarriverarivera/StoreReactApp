@@ -1,5 +1,5 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+
 import { getMeUserService } from '@/services/userServices'
 
 export const Dashboard = () => {
@@ -10,20 +10,20 @@ export const Dashboard = () => {
     const getUserData = async () => {
       try {
         const response = await getMeUserService(token)
-        if(response.status === 200) {
+        if (response.status === 200) {
           setUserData(response.data)
         }
-      } catch(error) {
-        console.log("ocurrio un error en el dashboard", error.message)
+      } catch (error) {
+        console.log('ocurrio un error en el dashboard', error.message)
       }
     }
     getUserData()
-  },[token]) //si cambia el token vuelve a ejecutar el useEffect
+  }, [token]) // si cambia el token vuelve a ejecutar el useEffect
 
   return (
     <>
-    <h1>Dashboard</h1>
-    {userData.first_name && <h3> {userData.first_name} </h3>}
+      <h1>Dashboard</h1>
+      {userData.first_name && <h3> {userData.first_name} </h3>}
     </>
   )
 }

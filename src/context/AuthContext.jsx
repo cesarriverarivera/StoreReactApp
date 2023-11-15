@@ -6,11 +6,13 @@ const AuthContext = createContext()
 const AuthProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false) // estoy autenticado ?
   const [userPayload, setUserPayload] = useState(null)// datos de usuario sacados del jwt decodificado(payload)
+  const [isAutorizedAdmin, setIsAutorizedAdmin] = useState(false)
 
   const login = (token) => {
     // setitem guarda el token en el local storage
     localStorage.setItem('token', token)
     const decoded = jwtDecode(token)
+    decoded.role === 'ADMIN' ? setIsAutorizedAdmin(true) : setIsAutorizedAdmin(false)
     setUserPayload(decoded) // jwt decode es una libreria para decodificar el token y devuelve la informacion decodificada
     setIsAuth(true)
   }
@@ -36,7 +38,8 @@ const AuthProvider = ({ children }) => {
     isAuth,
     userPayload,
     login,
-    logout
+    logout,
+    isAutorizedAdmin
   }
 
   return (
