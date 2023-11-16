@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import { useCartContext } from '../../hooks/useCartContext'
 import { useAuthContext } from '../../hooks/useAuthContext'
-import './VistaDetalle.css'
+import './vistaDetalle.css'
 import ProdAdded from '../ProdAdded/ProdAdded'
 
 const VistaDetalle = () => {
