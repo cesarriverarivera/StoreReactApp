@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-
 import { getMeUserService } from '@/services/userServices'
 
 export const Dashboard = () => {
@@ -27,3 +26,5 @@ export const Dashboard = () => {
     </>
   )
 }
+// DEBO CREAR UN FORMULARIO PARA REGSITRAR UN NUEVO PRODUCTO
+// LUEGO CREAR EN USERSERVICES EL SERVICIO CON AXIOS PARA ENVIAR LOS DATOS A LA BASE DE DATOS

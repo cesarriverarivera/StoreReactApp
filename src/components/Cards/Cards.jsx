@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom'
 import './Cards.css'
 
 const Cards = () => {
-  const { list, productImage, listFiltred } = useStoreContext()
+  const { list, listFiltred } = useStoreContext()
+  const productImage = 'https://sellmyuniform.co.uk/wp-content/uploads/2023/03/looking_for.jpg'
   console.log(listFiltred.length)
   return (
     <>

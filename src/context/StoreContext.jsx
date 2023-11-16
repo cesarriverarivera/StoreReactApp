@@ -6,7 +6,6 @@ function StoreProvider ({ children }) {
   const [list, setList] = useState([])
   const [listFiltred, setListFiltered] = useState([])
   const [loading, setLoading] = useState(true)
-  const [productImage, setProductImage] = useState('https://sellmyuniform.co.uk/wp-content/uploads/2023/03/looking_for.jpg')
 
   useEffect(() => {
     fetch('https://ecommerce-json-jwt.onrender.com/items')
@@ -20,7 +19,7 @@ function StoreProvider ({ children }) {
 
   function handlerSearch (texto) {
     const newList = []
-    list.map((e) => {
+    list.forEach((e) => {
       const item = e.product_name
       if (item.toLowerCase().includes(texto.toLowerCase())) {
         console.log(e)
@@ -35,7 +34,6 @@ function StoreProvider ({ children }) {
   const data = {
     list,
     loading,
-    productImage,
     handlerSearch,
     listFiltred
 

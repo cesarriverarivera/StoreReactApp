@@ -1,14 +1,13 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
-import { useStoreContext } from '@/hooks/useStoreContext'
 import { useCartContext } from '../../hooks/useCartContext'
 import { useAuthContext } from '../../hooks/useAuthContext'
 import './VistaDetalle.css'
 import ProdAdded from '../ProdAdded/ProdAdded'
 
 const VistaDetalle = () => {
-  const { productImage } = useStoreContext()
+  const productImage = 'https://sellmyuniform.co.uk/wp-content/uploads/2023/03/looking_for.jpg'
   const { prodCart } = useCartContext()
   const { isAuth } = useAuthContext()
   const navigate = useNavigate()
