@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import { useStoreContext } from '@/hooks/useStoreContext'
 import { Link } from 'react-router-dom'
-import './Cards.css'
+import './cards.css'
 
 const Cards = () => {
   const { list, listFiltred } = useStoreContext()

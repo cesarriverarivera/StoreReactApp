@@ -1,6 +1,6 @@
 import React from 'react'
 import { useCartContext } from '../../hooks/useCartContext'
-import './ProdAdded.css'
+import './prodAdded.css'
 
 const ProdAdded = () => {
   const { isBuyPress } = useCartContext()
